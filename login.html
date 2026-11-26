@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>หน้าแรก | เที่ยวบ้านเรา</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <p class="site-name">เที่ยวบ้านเรา</p>
+    <nav aria-label="เมนูหลัก">
+      <ul>
+        <li><a href="index.html">หน้าแรก</a></li>
+        <li><a href="places.html">ที่เที่ยว</a></li>
+        <li><a href="food.html">อาหาร</a></li>
+        <li><a href="plan.html">วางแผนเที่ยว</a></li>
+        <li><a href="travel.html">ข้อมูลการเดินทาง</a></li>
+        <li><a href="login.html">เข้าสู่ระบบ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Sarabun", "Noto Sans Thai", Arial, sans-serif;
+    }
+
+    body {
+      background-color: #eaf4fc;
+      color: #162a3d;
+      min-height: 100vh;
+    }
+
+    /* แถบนำทางด้านบน */
+    .navbar {
+      background-color: #1d5fa7;
+      color: #ffffff;
+      padding: 12px 28px;
+    }
+
+    .brand {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .nav-links a {
+      color: #dbeeff;
+      text-decoration: none;
+      font-size: 13px;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    /* พื้นที่ตรงกลางสำหรับฟอร์มล็อกอิน */
+    .login-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 36px 16px;
+    }
+
+    .login-card {
+      background-color: #ffffff;
+      width: 100%;
+      max-width: 440px;
+      border-radius: 10px;
+      padding: 28px 26px;
+      box-shadow: 0 4px 16px rgba(20, 74, 130, 0.1);
+      border: 1px solid #cfe3f5;
+    }
+
+    .login-header {
+      text-align: center;
+      margin-bottom: 22px;
+    }
+
+    .login-header h1 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #143b66;
+      margin-bottom: 4px;
+    }
+
+    .login-header p {
+      font-size: 12.5px;
+      color: #56708a;
+    }
+
+    .form-group {
+      margin-bottom: 14px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: #213a52;
+      margin-bottom: 6px;
+    }
+
+    .form-control,
+    .form-select {
+      width: 100%;
+      height: 38px;
+      padding: 0 12px;
+      border: 1px solid #c3d9ec;
+      border-radius: 6px;
+      font-size: 13px;
+      color: #162a3d;
+      background-color: #ffffff;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+
+    .form-control:focus,
+    .form-select:focus {
+      border-color: #1d5fa7;
+    }
+
+    .form-control::placeholder {
+      color: #97aec4;
+    }
+
+    /* ช่องรหัสผ่าน + ปุ่มแสดง */
+    .password-row {
+      display: flex;
+      gap: 8px;
+    }
+
+    .password-row .form-control {
+      flex: 1;
+    }
+
+    .btn-toggle-pw {
+      height: 38px;
+      padding: 0 14px;
+      background-color: #1d5fa7;
+      color: #ffffff;
+      border: none;
+      border-radius: 6px;
+      font-size: 12.5px;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-toggle-pw:hover {
+      background-color: #154880;
+    }
+
+    /* ปุ่มเข้าสู่ระบบหลัก */
+    .btn-login {
+      width: 100%;
+      height: 38px;
+      margin-top: 6px;
+      background-color: #1d5fa7;
+      color: #ffffff;
+      border: none;
+      border-radius: 6px;
+      font-size: 13.5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-login:hover {
+      background-color: #154880;
+    }
+
+    .status-msg {
+      margin-top: 10px;
+      font-size: 12.5px;
+      text-align: center;
+      min-height: 18px;
+    }
+
+    /* กล่องบัญชีทดสอบ */
+    .demo-box {
+      margin-top: 18px;
+      padding: 12px 14px;
+      background-color: #eef6fd;
+      border-radius: 6px;
+      font-size: 12px;
+      color: #3d566e;
+      line-height: 1.55;
+    }
+
+    .demo-box strong {
+      color: #163759;
+      display: block;
+      margin-bottom: 2px;
+    }
+  </style>
+
+  <!-- การ์ดเข้าสู่ระบบ -->
+  <main class="login-wrapper">
+    <section class="login-card">
+      <div class="login-header">
+        <h1>เข้าสู่ระบบ</h1>
+        <p>ยินดีต้อนรับสู่เว็บไซต์เที่ยวบ้านเรา</p>
+      </div>
+
+      <form id="loginForm" onsubmit="handleLogin(event)">
+        <div class="form-group">
+          <label for="username">ชื่อผู้ใช้</label>
+          <input
+            type="text"
+            id="username"
+            class="form-control"
+            placeholder="กรอกชื่อผู้ใช้"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="password">รหัสผ่าน</label>
+          <div class="password-row">
+            <input
+              type="password"
+              id="password"
+              class="form-control"
+              placeholder="กรอกรหัสผ่าน"
+              required
+            >
+            <button type="button" class="btn-toggle-pw" id="togglePwBtn" onclick="togglePassword()">แสดง</button>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="role">ประเภทผู้ใช้งาน</label>
+          <select id="role" class="form-select">
+            <option value="member" selected>สมาชิก (User)</option>
+            <option value="admin">ผู้ดูแลระบบ (Admin)</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn-login">เข้าสู่ระบบ</button>
+        <div class="status-msg" id="statusMsg"></div>
+      </form>
+
+      <div class="demo-box">
+        <strong>บัญชีทดสอบสำหรับทดลองใช้งาน</strong>
+        Admin: admin / admin123
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>นางสาวณัฎฐณิชา บุญประกอบ | 048 ใบงานฝึกปฏิบัติวิชาการสร้างเว็บไซต์ทางธุรกิจ</p>
+  </footer>
+
+  <script>
+    function togglePassword() {
+      const pwInput = document.getElementById("password");
+      const toggleBtn = document.getElementById("togglePwBtn");
+      const isHidden = pwInput.type === "password";
+
+      pwInput.type = isHidden ? "text" : "password";
+      toggleBtn.textContent = isHidden ? "ซ่อน" : "แสดง";
+    }
+
+    function handleLogin(event) {
+      event.preventDefault();
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value;
+      const role = document.getElementById("role").value;
+      const statusMsg = document.getElementById("statusMsg");
+
+      if (role === "admin" && username === "admin" && password === "admin123") {
+        statusMsg.style.color = "#1d5fa7";
+        statusMsg.textContent = "เข้าสู่ระบบสำเร็จในฐานะ Admin กำลังไปหน้าแรก...";
+        setTimeout(() => {
+          window.location.href = "index.html";
+        }, 800);
+      } else if (role === "member" && username !== "" && password !== "") {
+        statusMsg.style.color = "#1d5fa7";
+        statusMsg.textContent = `เข้าสู่ระบบสำเร็จ ยินดีต้อนรับคุณ ${username}`;
+        setTimeout(() => {
+          window.location.href = "index.html";
+        }, 800);
+      } else {
+        statusMsg.style.color = "#b8292f";
+        statusMsg.textContent = "ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง (ทดสอบ Admin: admin / admin123)";
+      }
+    }
+  </script>
+</body>
+</html>

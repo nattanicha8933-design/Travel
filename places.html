@@ -1,0 +1,102 @@
+<! doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>หน้าแรก | เที่ยวบ้านเรา</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <p class="site-name">เที่ยวบ้านเรา</p>
+    <nav aria-label="เมนูหลัก">
+      <ul>
+        <li><a href="index.html">หน้าแรก</a></li>
+        <li><a href="places.html">ที่เที่ยว</a></li>
+        <li><a href="food.html">อาหาร</a></li>
+        <li><a href="plan.html">วางแผนเที่ยว</a></li>
+        <li><a href="travel.html">ข้อมูลการเดินทาง</a></li>
+        <li><a href="login.html">เข้าสู่ระบบ</a></li>
+      </ul>
+    </nav>
+  </header>
+<main>
+<h1>แหล่งท่องเที่ยวแนะนำ</h1>
+<div class="manual-slider">
+  <div class="manual-track" id="manualTrack">
+    <div class="manual-slide">
+      <img src="images/Kaow1.jpg" alt="ภาพที่ 1">
+      <p class="slide-caption"><b>เขาช่องกระจก มองเห็นวิวอ่าวประจวบฯ แบบพาโนรามา</b></p>
+<br><b>เขาช่องกระจก</b> <ul>เป็นสถานที่ท่องเที่ยวสำคัญและเป็นสัญลักษณ์ของเมืองประจวบคีรีขันธ์ ตั้งอยู่บริเวณด้านหลังศาลากลางจังหวัด ในเขตเทศบาลเมืองประจวบคีรีขันธ์</ul>
+<b>ข้อมูลสำคัญ</b>
+<ul><b>· ลักษณะภูมิประเทศ :</b> เป็นภูเขาขนาดย่อม สูงประมาณ 245 เมตรจากระดับน้ำทะเล (หรือประมาณ 94 เมตรจากพื้นราบใกล้ชายฝั่ง)
+<br><b>· ที่มาของชื่อ :</b> บริเวณด้านทิศเหนือของภูเขามีช่องทะลุโปร่ง มองดูคล้ายกับกรอบของกระจก
+<br><b>· การเดินทางขึ้นไปด้านบน :</b> ต้องเดินขึ้นบันไดคอนกรีตจำนวน 396 ขั้น
+<br><b>· เวลาเปิดทำการ :</b> เปิดให้เข้าชมทุกวัน เวลา 05.00 – 20.00 น.</ul>
+    </div>
+    <div class="manual-slide">
+      <img src="images/sapanpla1.jpg" alt="ภาพที่ 2">
+      <p class="slide-caption"><b>สะพานสราญวิถี</b></p>
+<br><b>ศาลหลักเมืองประจวบคีรีขันธ์</b> 
+<ul><b>· ที่ตั้ง : </b> ถนนสละชีพ ตำบลประจวบคีรีขันธ์ อำเภอเมืองประจวบคีรีขันธ์ (ตรงข้ามศาลากลางจังหวัดประจวบคีรีขันธ์ และใกล้กับเขาช่องกระจก)
+<br><b>· เวลาทำการ :</b> เปิดทุกวัน ตั้งแต่เวลา 08:00 - 19:00 น.
+<br><b>· สถาปัตยกรรม :</b> เป็นอาคารทรงจตุรมุขยอดปรางค์ 9 ชั้น งดงามด้วยศิลปะแบบลพบุรีผสมผสานศิลปะไทย</ul>
+<br><b>องค์หลักเมือง (นาม "จตุโชค"):</b> 
+<ul>·ทำจากไม้ตะเคียนที่ได้มาจากอำเภอกุยบุรี
+<br>· มีขนาดความสูง 2.74 เมตร เส้นผ่านศูนย์กลาง 0.37 เมตร
+<br>· สถาปัตยกรรม :</b> เป็นอาคารทรงจตุรมุขยอดปรางค์ 9 ชั้น งดงามด้วยศิลปะแบบลพบุรีผสมผสานศิลปะไทย</ul>
+    </div>
+
+
+  <button type="button" class="nav-btn prev-btn" onclick="moveSlide(-1)" aria-label="ภาพก่อนหน้า">&#10094;</button>
+  <button type="button" class="nav-btn next-btn" onclick="moveSlide(1)" aria-label="ภาพถัดไป">&#10095;</button>
+</div>
+
+<div class="manual-dots" id="manualDots">
+  <span class="m-dot active" onclick="setSlide(0)"></span>
+  <span class="m-dot" onclick="setSlide(1)"></span>
+</div>
+</main>
+<main>
+<section class="card">
+<h2>ตลาดชุมชน</h2>
+   <center> <img src="images/ตลาดคลองวาฬ.jpeg" alt="ภาพที่ 1"></center>
+  <center><p>เดินชมร้านค้าและเลือกซื้อผลิตภัณฑ์จากคนในพื้นที่</p></center>
+</main>
+<main>
+<section class="card">
+<h2>จุดชมวิว</h2>
+   <center> <img src="images/เขาล้อมหมวก.png" alt="ภาพที่ 1"></center>
+<center><p>แวะพักและถ่ายภาพทิวทัศน์ของชุมชน</p></center>
+</main>
+<main>
+<a class="button" href="plan.html">จัดแผนเที่ยวหนึ่งวัน</a>
+</main>
+<footer>
+<p>นางสาวณัฎฐณิชา บุญประกอบ | 048 ใบงานฝึกปฏิบัติวิชาการสร้างเว็บไซต์ทางธุรกิจ</p>
+<script>
+  let manualIndex = 0;
+  const manualTrack = document.getElementById("manualTrack");
+  const manualSlides = document.querySelectorAll(".manual-slide");
+  const manualDots = document.querySelectorAll(".m-dot");
+
+  function renderManualSlider() {
+    manualTrack.style.transform = `translateX(-${manualIndex * 100}%)`;
+    manualDots.forEach((dot, i) => {
+      dot.classList.toggle("active", i === manualIndex);
+    });
+  }
+
+  function moveSlide(step) {
+    manualIndex = (manualIndex + step + manualSlides.length) % manualSlides.length;
+    renderManualSlider();
+  }
+
+  function setSlide(index) {
+    manualIndex = index;
+    renderManualSlider();
+  }
+</script>
+</footer>
+</body>
+</html>
